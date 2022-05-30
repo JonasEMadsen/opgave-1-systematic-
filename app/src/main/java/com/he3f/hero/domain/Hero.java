@@ -8,6 +8,8 @@ import javax.xml.bind.annotation.XmlRootElement;
                 name = "hero")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Hero {
+
+
     private String name;
     private String email;
     private String city;
@@ -16,30 +18,28 @@ public class Hero {
     public Hero() {
     }
 
-    public String getName() {
+    public java.lang.String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(java.lang.String name) {
         this.name = name;
     }
-    public String getEmail() {
+
+    public java.lang.String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(java.lang.String email) {
         this.email = email;
     }
-    
-    public void setCity(String city) {
-        this.city = city;
-    }
-    public String getCity() {
+
+    public java.lang.String getCity() {
         return city;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCity(java.lang.String city) {
+        this.city = city;
     }
 
 

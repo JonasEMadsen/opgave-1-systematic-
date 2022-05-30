@@ -63,6 +63,8 @@ public class HeroEndpoint {
             Hero hereFromList = heroes.get(i);
             if (hereFromList.getId() == hero.getId()) {
                 heroes.get(i).setName(hero.getName());
+                heroes.get(i).setCity(hero.getCity());
+               heroes.get(i).setEmail(hero.getEmail());
             }
         }
         return heroes;

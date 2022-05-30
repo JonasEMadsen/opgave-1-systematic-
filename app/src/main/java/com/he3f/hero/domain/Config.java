@@ -28,7 +28,7 @@ public class Config {
                 if (StringUtils.isEmpty(path)) {
                     properties = getLocalConfig();
                 } else {
-                    File rootPath = new File(".");
+                    File rootPath = new File("");
                     File file = new File(rootPath.getAbsolutePath() + "" + path);
                     properties = getConfigFile(file);
 

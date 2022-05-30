@@ -1,4 +1,5 @@
-<h2>My Heroes</h2>
+<div>
+<div> <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">
@@ -7,18 +8,28 @@
     <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
   </li>
 </ul>
-
+</div>
 <div>
-  <label>Hero name:
-    <input #heroName />
-  </label>
-  <label>Hero email:
-    <input #heroEmail />
-  </label>
+<table>
+  <tr>
+    <td> Hero name: </td>
+    <td>  <input #heroName /> </td>
+  </tr>
+<tr>
+<td> Hero email: </td>
+  <td> <input #heroEmail /> </td>
+
+</tr>
+<tr>
+  <td> Hero city: </td>
+  <td> <input #heroCity /> </td>
+
+</tr>
+</table>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value, heroEmail.value); heroName.value=''; heroEmail.value=''">
+  <button (click)="add(heroName.value, heroEmail.value, heroCity.value); heroName.value=''; heroEmail.value=''; heroCity.value=''">
     add
   </button>
 </div>
-
+</div>
 <!--  <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->

@@ -114,13 +114,7 @@
 
   </build>
 
-  <repositories>
-    <repository>
-      <id>objectdb</id>
-      <name>ObjectDB Repository</name>
-      <url>http://m2.objectdb.com</url>
-    </repository>
-  </repositories>
+
 
   <dependencies>
     <dependency>
@@ -136,11 +130,7 @@
     </dependency>
 
 
-    <dependency>
-      <groupId>com.objectdb</groupId>
-      <artifactId>objectdb</artifactId>
-      <version>2.6.3</version>
-    </dependency>
+
     <dependency>
       <groupId>org.eclipse.persistence</groupId>
       <artifactId>javax.persistence</artifactId>
