@@ -71,4 +71,13 @@ button.delete {
   background-color: gray !important;
   color: white;
 }
+.heroList {
+float: Right;
+}
 
+.heroInfo {
+  float: left;
+}
+h2 {
+  margin-top: 0px
+}
