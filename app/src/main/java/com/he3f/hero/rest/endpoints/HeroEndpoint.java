@@ -61,12 +61,16 @@ public class HeroEndpoint {
     public static List<Hero> updateHero(Hero hero) {
         for (int i = 0; i < heroes.size(); i++) {
             Hero hereFromList = heroes.get(i);
-            if (hereFromList.getId() == hero.getId()) {
-                heroes.get(i).setName(hero.getName());
-                heroes.get(i).setCity(hero.getCity());
-               heroes.get(i).setEmail(hero.getEmail());
-            }
+            if (hereFromList.getId() == hero.getId())
+                if (!hero.getName().equalsIgnoreCase("søren")) {
+                    heroes.get(i).setName(hero.getName());
+                }
+
+            heroes.get(i).setCity(hero.getCity());
+            heroes.get(i).setEmail(hero.getEmail());
+
         }
+
         return heroes;
     }
 
@@ -92,10 +96,14 @@ public class HeroEndpoint {
     @Path("{path: (?i)(api/heroes)}")
     @Produces(MediaType.APPLICATION_JSON)
     public static Hero createHero(Hero hero) {
+      if (!hero.getName().toLowerCase().equals("søren") ){
         size += 1;
         hero.setId(size);
         heroes.add(hero);
         return hero;
+      }else {
+          return null;
+      }
     }
 
     @GET
